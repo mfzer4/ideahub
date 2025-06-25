@@ -1,0 +1,15 @@
+export const availablePagesForPermissions = [
+  { id: '/', label: 'Home (Dashboard)' },
+  { id: '/dashboard', label: 'Dashboard' },
+  { id: '/crm', label: 'CRM' },
+  { id: '/prospeccoes', label: 'Prospecções' },
+  { id: '/tarefas-cadastro', label: 'Tarefas de Cadastro' },
+  { id: '/apolices', label: 'Apólices Cadastradas' },
+  { id: '/usuarios', label: 'Controle de Usuários' },
+  { id: '/vendedores', label: 'Vendedores' },
+  { id: '/sinistros', label: 'Sinistros' },
+  { id: '/relatorios', label: 'Relatórios' },
+  { id: '/configuracoes', label: 'Configurações' },
+  { id: '/ajuda', label: 'Ajuda & Suporte' },
+  { id: '/acesso-negado', label: 'Página de Acesso Negado' },
+];

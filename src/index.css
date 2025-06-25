@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 224 71% 4%; /* Very dark blue/black */
+    --foreground: 210 20% 98%; /* Off-white */
+
+    --card: 224 71% 10%; /* Slightly lighter for card to stand out a bit */
+    --card-foreground: 210 20% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 130 70% 50%; /* Vibrant Green */
+    --primary-foreground: 130 70% 10%; /* Dark Green for text on primary */
+
+    --secondary: 215 28% 17%; /* Dark bluish gray */
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 215 28% 17%;
+    --muted-foreground: 210 20% 60%; /* Lighter gray for muted text */
+
+    --accent: 130 70% 50%; /* Vibrant Green */
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 72% 51%; /* Red */
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 130 50% 50% / 0.2; /* Semi-transparent green for glass border */
+    --input: 215 28% 17%;
+    --ring: 130 70% 60%; /* Green for focus rings */
+
+    --radius: 0.75rem;
+  }
+
+  .light {
+    --background: 0 0% 98%; /* Off-white background */
+    --foreground: 224 71% 4%; /* Dark blue/black text */
+
+    --card: 0 0% 100%; /* White cards */
+    --card-foreground: 224 71% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
+
+    --primary: 130 60% 45%; /* Slightly muted green */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
+
+    --secondary: 210 20% 92%; /* Light gray */
+    --secondary-foreground: 224 71% 4%;
+
+    --muted: 210 20% 92%;
+    --muted-foreground: 210 20% 40%; /* Darker gray for muted text */
+
+    --accent: 130 60% 45%;
+    --accent-foreground: 224 71% 4%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 85%; /* Light gray border */
+    --input: 210 20% 90%;
+    --ring: 130 70% 55%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+}
+
+.glassmorphic-card {
+  @apply bg-card/60 dark:bg-card/30 backdrop-blur-xl border border-primary/30 dark:border-primary/20 shadow-2xl;
+}
+
+.glassmorphic-header {
+  @apply bg-background/70 dark:bg-background/50 backdrop-blur-lg sticky top-0 z-50;
+}
